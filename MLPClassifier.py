@@ -3,7 +3,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score, roc_auc_score, f1_score
 
-# Load the data
 X_test = pd.read_csv('X_test.csv')
 Y_test = pd.read_csv('Y_test.csv').values.ravel()  # Ensuring Y_test is a 1D array
 x_train = pd.read_csv('x_train.csv')
@@ -22,8 +21,6 @@ hidden_layer_sizes = [
     (100, 50),     # Two hidden layers with 100 and 50 neurons
     (100, 50, 25)  # Three hidden layers with 100, 50, and 25 neurons
 ]
-
-# Dictionary to store results
 results = {}
 
 for size in hidden_layer_sizes:
